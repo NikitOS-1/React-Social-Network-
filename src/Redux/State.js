@@ -34,7 +34,7 @@ let State = {
         ]
     },
     FriendPage: {
-        friendsData =[
+        friendsData: [
             { id: 1, name: 'Nikita' },
             { id: 1, name: 'Nikita' },
             { id: 1, name: 'Nikita' },

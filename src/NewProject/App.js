@@ -17,7 +17,7 @@ const App = (props) => {
         <div className={s.App}>
             <Header />
             <Navbar />
-            <NavFrieds />
+            <NavFrieds friendsData={props.State.FriendPage} />
             <div className={s.Content}>
                 <Route path='/profile' render={() => <Profile PostData={props.State.ProfilePage} />} />
                 <Route path='/message' render={() => <Message messagesData={props.State.MessagePage} />} />
