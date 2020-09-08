@@ -1,0 +1,11 @@
+.App{
+    display: grid;
+    grid-template-columns: 15% 65%;
+    grid-template-rows: 7em 20em;
+    
+    grid-template-areas: 
+    "Header Header"
+    "Navbar Content";
+    grid-gap: 10px;
+    justify-content: center;
+}

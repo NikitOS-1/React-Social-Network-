@@ -1,0 +1,21 @@
+.Navbar{
+    background-color: aquamarine;
+    grid-area: Navbar;
+    border-radius: 15px;
+    font-size: 20px;
+}
+.item{
+    padding: 5px;
+    margin: 10px;
+    font-size: 30px;
+}
+.item a {
+    color: black;
+    text-decoration: none;
+}
+.item :hover {
+    color: burlywood;
+}
+.item .activeNav {
+    color: burlywood;
+}

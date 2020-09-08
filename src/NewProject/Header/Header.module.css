@@ -1,0 +1,12 @@
+.Header{
+    background-color: aquamarine;
+    grid-area: Header;
+    border-radius: 15px;
+}
+.Header h1 {
+    text-align: center;
+}
+.Header h1 code {
+    padding-left: 30px;
+    color: indigo;
+}
