@@ -1,6 +1,6 @@
 import React from 'react';
-import {BrowserRouter} from 'react-router-dom';
-import {Route} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import s from './App.module.css';
 import Header from './Header/Header.jsx';
 import Navbar from './Navbar/Navbar.jsx';
@@ -18,11 +18,11 @@ const App = (props) => {
                 <Header />
                 <Navbar />
                 <div>
-                    <Route path='/profile' component={Profile}/>
-                    <Route path='/message' component={Message}/>
-                    <Route path='/news' component={News}/>
-                    <Route path='/music' component={Music}/>
-                    <Route path='/set' component={Set}/>
+                    <Route path='/profile' render={() => <Profile />} />
+                    <Route path='/message' render={() => <Message />} />
+                    <Route path='/news' render={() => <News />} />
+                    <Route path='/music' render={() => <Music />} />
+                    <Route path='/set' render={() => <Set />} />
                 </div>
             </div>
         </BrowserRouter>
@@ -31,4 +31,3 @@ const App = (props) => {
 
 export default App;
 
-                    
