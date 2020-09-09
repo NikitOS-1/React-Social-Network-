@@ -4,6 +4,7 @@ import logo from './logo512.png'
 //import PostData from '../../../../../Data/postData.js'
 
 const PostIng = (props) => {
+    
     return (
         <div className={s.Post}>
             <div className={s.fullPost}>
@@ -15,8 +16,9 @@ const PostIng = (props) => {
     )
 };
 
+
 const Post = (props) => {
-    let postElement = props.post.map(p => <PostIng id={p.id} countLike={p.countLike} post={p.post} img={p.img} />);
+    let postElement = props.PostData.map(p => <PostIng id={p.id} countLike={p.countLike} post={p.post} img={p.img} />);
     return (
         <div>
             {postElement}
