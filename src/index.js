@@ -12,7 +12,7 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-// dev test 0.2
+// dev test 0.3
 //PostData={PostData} messagesData={messagesData} dialogsData={dialogsData}
 
 
