@@ -9,7 +9,6 @@ import Message from './Content/Message/Message.jsx';
 import News from './Content/News/News.jsx';
 import Music from './Content/Music/Music.jsx';
 import Set from './Content/Set/Set.jsx';
-//import logo from './Content/Profile/Posts/Post/logo512.png';
 
 
 const App = (props) => {
@@ -21,7 +20,7 @@ const App = (props) => {
                 <Navbar />
                 <div>
                     <Route path='/profile' render={() => <Profile PostData={props.PostData}/>} />
-                    <Route path='/message' render={() => <Message />} />
+                    <Route path='/message' render={() => <Message messagesData={props.messagesData} dialogsData={props.dialogsData} />} />
                     <Route path='/news' render={() => <News />} />
                     <Route path='/music' render={() => <Music />} />
                     <Route path='/set' render={() => <Set />} />
