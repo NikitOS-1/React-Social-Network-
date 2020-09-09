@@ -1,4 +1,4 @@
-import {logo} from './../NewProject/Content/Profile/Posts/Post/logo512.png'
+//import {logo} from './../NewProject/Content/Profile/Posts/Post/logo512.png'
 
 let PostData = [
     { id: 1, countLike: 14, img: { logo }, post: 'LKIOO' },
@@ -15,5 +15,5 @@ let PostData = [
     { id: 6, countLike: 14, img: { logo }, post: 'LKIOOra' }
 ];
 
-export default PostData;
-//master stable version 0.2
+//export default PostData;
+//test
