@@ -9,6 +9,7 @@ import Message from './Content/Message/Message.jsx';
 import News from './Content/News/News.jsx';
 import Music from './Content/Music/Music.jsx';
 import Set from './Content/Set/Set.jsx';
+import NavFrieds from './NavFrieds/NavFrieds'
 
 
 const App = (props) => {
@@ -18,9 +19,10 @@ const App = (props) => {
             <div className={s.App}>
                 <Header />
                 <Navbar />
-                <div>
-                    <Route path='/profile' render={() => <Profile PostData={props.PostData}/>} />
-                    <Route path='/message' render={() => <Message messagesData={props.messagesData} dialogsData={props.dialogsData} />} />
+                <NavFrieds />
+                <div className={s.Content}>
+                    <Route path='/profile' render={() => <Profile PostData={props.State.ProfilePage}/>} />
+                    <Route path='/message' render={() => <Message messagesData={props.State.MessagePage} />} />
                     <Route path='/news' render={() => <News />} />
                     <Route path='/music' render={() => <Music />} />
                     <Route path='/set' render={() => <Set />} />

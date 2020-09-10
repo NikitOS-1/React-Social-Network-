@@ -1,5 +1,6 @@
 .Post{
     text-align: left;
+    display: inline-block;
 }
 .post img {
     width: 50px;

@@ -1,0 +1,10 @@
+.NavFrieds{
+    background-color: aqua;
+    grid-area: NavFrieds;
+    border-radius: 15px;
+}
+p {
+    font-size: 20px;
+    text-align: center;
+    margin: 1em;
+}
