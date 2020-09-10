@@ -4,11 +4,10 @@ import PostAdd from './PostAdd/PostAdd';
 import Post from './Post/Post';
 
 const Posts = (props) => {
-
     return (
         <div className={s.Posts}>
             <PostAdd />
-            <Post PostData={props.PostData}/>
+            <Post PostData={props.PostData.PostData}/>
         </div>
     );
 };
