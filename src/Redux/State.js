@@ -1,18 +1,18 @@
 let State = {
     ProfilePage: {
         PostData: [
-            { id: 1, countLike: 14, post: 'LKIOO' },
-            { id: 2, countLike: 21, post: 'Helloo' },
-            { id: 3, countLike: 11, post: 'Hoy Hey' },
-            { id: 4, countLike: 14, post: 'LKIOOa' },
-            { id: 5, countLike: 14, post: 'LKIOOa' },
-            { id: 6, countLike: 14, post: 'LKIOOra' },
-            { id: 1, countLike: 14, post: 'LKIOO' },
-            { id: 2, countLike: 21, post: 'Helloo' },
-            { id: 3, countLike: 11, post: 'Hoy Hey' },
-            { id: 4, countLike: 14, post: 'LKIOOa' },
-            { id: 5, countLike: 14, post: 'LKIOOa' },
-            { id: 6, countLike: 14, post: 'LKIOOra' }
+            { id: 1, countLike: 98164, post: 'Hi this my dog' },
+            { id: 2, countLike: 4521, post: 'i learn english ' },
+            { id: 3, countLike: 1981, post: 'every day ' },
+            { id: 4, countLike: 1764, post: 'tell me your offer' },
+            { id: 5, countLike: 8184, post: 'i dont help them' },
+            { id: 6, countLike: 144, post: 'i want dont worry' },
+            { id: 7, countLike: 114, post: 'i like this language ' },
+            { id: 8, countLike: 321, post: 'Java Script good language for newbie' },
+            { id: 9, countLike: 131, post: 'helloy' },
+            { id: 10, countLike: 124, post: 'special frase' },
+            { id: 11, countLike: 154, post: 'why does she like this chanel' },
+            { id: 12, countLike: 14984, post: 'what do you know intresting and useful' }
         ]
     },
     MessagePage: {
