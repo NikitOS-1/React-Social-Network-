@@ -32,6 +32,15 @@ let State = {
             { id: 5, name: 'Vasya' },
             { id: 6, name: 'Valera' }
         ]
+    },
+    FriendPage: {
+        friendsData =[
+            { id: 1, name: 'Nikita' },
+            { id: 1, name: 'Nikita' },
+            { id: 1, name: 'Nikita' },
+            { id: 1, name: 'Nikita' },
+            { id: 1, name: 'Nikita' }
+        ]
     }
 };
 

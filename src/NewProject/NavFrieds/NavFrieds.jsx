@@ -3,10 +3,15 @@ import React from 'react';
 import s from './NavFrieds.module.css';
 
 
+
 const NavFrieds = () => {
+    let friendData = friendsData.map(friend => <Friends img={friend.ava} name={friend.name} />)
     return (
         <div className={s.NavFrieds}>
-                <p>Friends</p>
+            <p>Friends</p>
+            <div>
+                <Friends />
+            </div>
         </div>
     );
 };
