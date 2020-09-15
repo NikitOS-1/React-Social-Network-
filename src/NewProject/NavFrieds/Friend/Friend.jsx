@@ -9,8 +9,7 @@ const Friend = (props) => {
     return (
         <div className={s.Friend}>
             <p>Friend</p>
-            <div>
-            </div>
+            <div></div>
         </div>
     );
 };
