@@ -3,7 +3,8 @@ import s from './Friend.module.css';
 
 const FriendOnly = (props) => {
     return(
-        <div>
+        <div className={s.FriendOnly}>
+            <img src="#" />
             {props.name}
         </div>
     )
@@ -13,7 +14,6 @@ const Friend = (props) => {
     let friendsElement = props.friendsData.friendsData.map( f => <FriendOnly name={f.name}/>)
     return (
         <div className={s.Friend}>
-            <p>Friend</p>
             <div>
                 {friendsElement}
             </div>
