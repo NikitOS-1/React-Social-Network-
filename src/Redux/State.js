@@ -36,10 +36,10 @@ let State = {
     FriendPage: {
         friendsData: [
             { id: 1, name: 'Nikita' },
-            { id: 1, name: 'Nikita' },
-            { id: 1, name: 'Nikita' },
-            { id: 1, name: 'Nikita' },
-            { id: 1, name: 'Nikita' }
+            { id: 1, name: 'Dima' },
+            { id: 1, name: 'Ira' },
+            { id: 1, name: 'Sasha' },
+            { id: 1, name: 'Vitya' }
         ]
     }
 };
