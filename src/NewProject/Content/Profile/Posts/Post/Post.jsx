@@ -6,8 +6,8 @@ const PostIng = (props) => {
         <div className={s.Post}>
             <div className={s.fullPost}>
                 <img src={props.ava} alt='Your Ava'/>
-                <p className={s.id}>{props.id}</p>
                 <p className={s.postText}>{props.post}</p>
+                <p className={s.id}>{props.id}</p>
                 <p className={s.countLike}>Likes: {props.countLike}</p>
             </div>
         </div>
