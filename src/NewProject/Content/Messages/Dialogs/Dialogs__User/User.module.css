@@ -1,0 +1,10 @@
+.User{
+    padding: 15px;
+    border: 1px solid black;
+}
+.UserLogo{
+    border-radius: 30px;
+    border: black solid 1px;
+}
+.UserName{
+}
