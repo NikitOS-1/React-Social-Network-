@@ -1,8 +1,12 @@
 .Dialogs{
-    display: grid;
-    grid-template-columns: 4fr 8fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
 }
 .UserItem{
+    border: 1px solid black;
 }
 .LastMessageItem{
+    border: 1px solid black;
 }
