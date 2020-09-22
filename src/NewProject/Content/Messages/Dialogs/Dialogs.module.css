@@ -1,12 +1,6 @@
 .Dialogs{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    
 }
 .UserItem{
-    border: 1px solid black;
 }
 .LastMessageItem{
-    border: 1px solid black;
 }
