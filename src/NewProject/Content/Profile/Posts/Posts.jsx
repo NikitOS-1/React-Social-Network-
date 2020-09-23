@@ -6,7 +6,7 @@ import Post from './Post/Post';
 const Posts = (props) => {
     return (
         <div className={s.Posts}>
-            <PostAdd />
+            <PostAdd addPost={props.addPost} updateNewPostText={props.updateNewPostText}/>
             <Post PostData={props.PostData.PostData}/>
         </div>
     );

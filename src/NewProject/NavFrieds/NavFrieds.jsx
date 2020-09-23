@@ -1,12 +1,14 @@
 import React from 'react';
-//import {NavLink} from 'react-router-dom';
 import s from './NavFrieds.module.css';
+import Friend from './Friend/Friend';
 
-
-const NavFrieds = () => {
+const NavFrieds = (props) => {
     return (
         <div className={s.NavFrieds}>
-                <p>Friends</p>
+            <p>Friends</p>
+            <div>
+                <Friend friendsData={props.friendsData} />
+            </div>
         </div>
     );
 };

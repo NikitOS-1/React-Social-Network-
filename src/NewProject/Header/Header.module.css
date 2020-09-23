@@ -1,5 +1,5 @@
 .Header{
-    background-color: aquamarine;
+    background-color: rgba(104, 135, 240, 0.7);
     grid-area: Header;
     border-radius: 15px;
 }

@@ -1,34 +1,32 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import s from './App.module.css';
 import Header from './Header/Header.jsx';
 import Navbar from './Navbar/Navbar.jsx';
 import Profile from './Content/Profile/Profile.jsx';
-import Message from './Content/Message/Message.jsx';
+import Messages from './Content/Messages/Messages.jsx';
 import News from './Content/News/News.jsx';
 import Music from './Content/Music/Music.jsx';
 import Set from './Content/Set/Set.jsx';
 import NavFrieds from './NavFrieds/NavFrieds'
 
-
 const App = (props) => {
 
     return (
-        <BrowserRouter>
-            <div className={s.App}>
-                <Header />
-                <Navbar />
-                <NavFrieds />
-                <div className={s.Content}>
-                    <Route path='/profile' render={() => <Profile PostData={props.State.ProfilePage}/>} />
-                    <Route path='/message' render={() => <Message messagesData={props.State.MessagePage} />} />
-                    <Route path='/news' render={() => <News />} />
-                    <Route path='/music' render={() => <Music />} />
-                    <Route path='/set' render={() => <Set />} />
-                </div>
+        <div className={s.App}>
+            <Header />
+            <Navbar />
+            <NavFrieds friendsData={props.State.FriendPage} />
+            <div className={s.Content}>
+                <Route path='/profile' render={() => <Profile PostData={props.State.ProfilePage} 
+                                                                addPost={props.addPost}
+                                                                updateNewPostText={props.updateNewPostText}/>} />
+                <Route path='/message' render={() => <Messages messagesData={props.State.MessagePage} />} />
+                <Route path='/news' render={() => <News />} />
+                <Route path='/music' render={() => <Music />} />
+                <Route path='/set' render={() => <Set />} />
             </div>
-        </BrowserRouter>
+        </div>
     );
 };
 

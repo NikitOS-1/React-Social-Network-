@@ -1,5 +1,5 @@
 .Navbar{
-    background-color: aquamarine;
+    background-color: rgba(104, 135, 240, 0.7);
     grid-area: Navbar;
     border-radius: 15px;
     font-size: 20px;
@@ -18,4 +18,7 @@
 }
 .item .activeNav {
     color: burlywood;
+}
+.item .Set{
+    margin-top: 20px;
 }

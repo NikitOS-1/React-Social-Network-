@@ -1,5 +1,6 @@
 .Profile{
-    background-color: rgb(225, 227, 245);
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
     grid-area: Content;
     border-radius: 7px;
 }
