@@ -5,7 +5,7 @@ import Dialogs from './Dialogs/Dialogs.jsx'
 const Messages = (props) => {
     return (
         <div className={s.Messages}>
-            <Dialogs messagesData={props.messagesData} />
+            <Dialogs messagesData={props.messagesData} addMessage={props.addMessage}/>
         </div>
     );
 };

@@ -5,12 +5,12 @@ const LastMessage = (props) => {
     let inputText = React.createRef();
     let addText = () => {
         let text = inputText.current.value;
-        alert(text)
+        props.addMessage(text);
     }
     return (
         <div className={s.LastMessage}>
             {props.message}
-            <textarea ref={inputText}></textarea>
+            <textarea ref={inputText} />
             <button onClick={addText}>Send</button>
         </div>
     )

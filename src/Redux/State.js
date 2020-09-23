@@ -20,8 +20,8 @@ let State = {
     },
     MessagePage: {
         messagesData: [
-            { id: 1, message: 'hey' },
-            { id: 2, message: 'Yo' },
+            { id: 1, message: 'Write you Message' }
+            /*{ id: 2, message: 'Yo' },
             { id: 3, message: 'who knows it' },
             { id: 4, message: 'switch' },
             { id: 5, message: 'how offen do you watch this code' },
@@ -31,10 +31,10 @@ let State = {
             { id: 3, message: 'who knows it' },
             { id: 4, message: 'switch' },
             { id: 5, message: 'how offen do you watch this code' },
-            { id: 6, message: 'west coast customs' }
+            { id: 6, message: 'west coast customs' }*/
         ],
         dialogsData: [
-            { id: 1, name: 'Dima' },
+            { id: 1, name: 'User' }/*
             { id: 2, name: 'Rima' },
             { id: 3, name: 'Sasha' },
             { id: 4, name: 'Sveta' },
@@ -45,7 +45,7 @@ let State = {
             { id: 3, name: 'Sasha' },
             { id: 4, name: 'Sveta' },
             { id: 5, name: 'Vasya' },
-            { id: 6, name: 'Valera' }
+            { id: 6, name: 'Valera' }*/
         ]
     },
     FriendPage: {
@@ -65,6 +65,15 @@ let State = {
         ]
     }
 };
+export let addMessage = (messages) => {
+    let newMessage = {
+        id:1,
+        message: messages
+    };
+    State.MessagePage.messagesData.push(newMessage);
+    rerenderEntireTree(State);
+};
+
 
 export let addPost = () => {
     let newPost = {
