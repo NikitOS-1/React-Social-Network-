@@ -1,10 +1,17 @@
 .User{
+    height: 100px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: "UL"
+                        "UN";
 }
 .UserLogo img{
     width: 50px;
     height: 50px;
     border-radius: 30px;
+    grid-area: UL;
 }
 .UserName{
     padding-left: 30px;
+    grid-area: UN;
 }

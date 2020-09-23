@@ -10,7 +10,6 @@ import Music from './Content/Music/Music.jsx';
 import Set from './Content/Set/Set.jsx';
 import NavFrieds from './NavFrieds/NavFrieds'
 
-
 const App = (props) => {
 
     return (
@@ -19,7 +18,9 @@ const App = (props) => {
             <Navbar />
             <NavFrieds friendsData={props.State.FriendPage} />
             <div className={s.Content}>
-                <Route path='/profile' render={() => <Profile PostData={props.State.ProfilePage} />} />
+                <Route path='/profile' render={() => <Profile PostData={props.State.ProfilePage} 
+                                                                addPost={props.addPost}
+                                                                updateNewPostText={props.updateNewPostText}/>} />
                 <Route path='/message' render={() => <Messages messagesData={props.State.MessagePage} />} />
                 <Route path='/news' render={() => <News />} />
                 <Route path='/music' render={() => <Music />} />

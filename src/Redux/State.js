@@ -1,6 +1,8 @@
+import {rerenderEntireTree} from '../render';
+
 let State = {
     ProfilePage: {
-        PostData: [
+        PostData: [/*
             { id: 1, countLike: 98164, post: 'Hi this my dog' },
             { id: 2, countLike: 4521, post: 'i learn english ' },
             { id: 3, countLike: 1981, post: 'every day ' },
@@ -13,7 +15,8 @@ let State = {
             { id: 10, countLike: 124, post: 'special frase' },
             { id: 11, countLike: 154, post: 'why does she like this chanel' },
             { id: 12, countLike: 14984, post: 'what do you know intresting and useful' }
-        ]
+        */],
+        newPostText : 'Hell11o'
     },
     MessagePage: {
         messagesData: [
@@ -61,6 +64,21 @@ let State = {
             { id: 1, name: 'Vasya' }
         ]
     }
+};
+
+export let addPost = () => {
+    let newPost = {
+        id:1,
+        countLike:0,
+        post: State.ProfilePage.newPostText
+    };
+    State.ProfilePage.PostData.push(newPost);
+    State.ProfilePage.newPostText = '';
+    rerenderEntireTree(State);
+};
+export let updateNewPostText = (newText) => {
+    State.ProfilePage.newPostText = newText;
+    rerenderEntireTree(State);
 };
 
 export default State;
