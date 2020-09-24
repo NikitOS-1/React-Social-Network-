@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import App from './NewProject/App';
-import { addPost , updateNewPostText, addMessage} from './Redux/State';
+import { addPost , updateNewPostText, addMessage, updateNewMessage} from './Redux/State';
 
 export let rerenderEntireTree = (State) => {
   ReactDOM.render(
@@ -11,7 +11,8 @@ export let rerenderEntireTree = (State) => {
         <App State={State} 
         addPost={addPost}
         updateNewPostText={updateNewPostText} 
-        addMessage={addMessage}/>
+        addMessage={addMessage}
+        updateNewMessage={updateNewMessage}/>
       </BrowserRouter>, document.getElementById('root')
   );
 };

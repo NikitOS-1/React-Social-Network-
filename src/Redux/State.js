@@ -46,7 +46,8 @@ let State = {
             { id: 4, name: 'Sveta' },
             { id: 5, name: 'Vasya' },
             { id: 6, name: 'Valera' }*/
-        ]
+        ],
+        newMessages : ''
     },
     FriendPage: {
         friendsData: [
@@ -65,14 +66,19 @@ let State = {
         ]
     }
 };
-export let addMessage = (messages) => {
+export let addMessage = () => {
+    debugger
     let newMessage = {
         id:1,
-        message: messages
+        message: State.messagesData.newMessages
     };
     State.MessagePage.messagesData.push(newMessage);
-    rerenderEntireTree(State);
 };
+export let updateNewMessage = (Messages) => {
+    debugger
+    State.MessagePage.newMessages = Messages
+    rerenderEntireTree(State);
+}
 
 
 export let addPost = () => {
@@ -81,7 +87,7 @@ export let addPost = () => {
         countLike:0,
         post: State.ProfilePage.newPostText
     };
-    State.ProfilePage.PostData.push(newPost);
+    State.ProfilePage.PostData.unshift(newPost);
     State.ProfilePage.newPostText = '';
     rerenderEntireTree(State);
 };

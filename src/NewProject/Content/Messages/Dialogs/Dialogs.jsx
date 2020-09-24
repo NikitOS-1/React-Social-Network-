@@ -4,8 +4,14 @@ import User from './Dialogs__User/User';
 import LastMessage from './Dialogs__LastMessage/LastMessage';
 
 const Dialogs = (props) => {
-    let userElement = props.messagesData.dialogsData.map(d => <User name={d.name} id={d.id} />);
-    let messageElement = props.messagesData.messagesData.map(m => <LastMessage message={m.message} addMessage={props.addMessage}/>);
+    let userElement = props.messagesData.dialogsData.map(d => 
+    <User name={d.name} 
+        id={d.id} />);
+    let messageElement = props.messagesData.messagesData.map(
+        m => <LastMessage message={m.message} 
+                addMessage={props.addMessage}
+                updateNewMessage={props.updateNewMessage}/>
+                );
     return (
         <div className={s.Dialogs}>
             <div className={s.UserItem}>
