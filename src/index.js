@@ -1,5 +1,5 @@
 import './index.css';
 import State from './Redux/State';
-import {rerenderEntireTree} from './render';
+import { rerenderEntireTree } from './render';
 
 rerenderEntireTree(State);
