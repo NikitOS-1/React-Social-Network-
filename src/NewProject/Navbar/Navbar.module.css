@@ -14,10 +14,10 @@
     text-decoration: none;
 }
 .item :hover {
-    color: burlywood;
+    color: whitesmoke;
 }
 .item .activeNav {
-    color: burlywood;
+    color: whitesmoke;
 }
 .item .Set{
     margin-top: 20px;
