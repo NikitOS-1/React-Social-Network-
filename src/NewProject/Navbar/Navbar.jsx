@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import s from './Navbar.module.css';
 
 
@@ -10,18 +10,7 @@ const Navbar = () => {
                 <NavLink to='/profile' activeClassName={s.activeNav}>Profile</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to='/message' activeClassName={s.activeNav}>Message</NavLink>
-            </div>
-            <div className={s.item}>
-                <NavLink to='/news' activeClassName={s.activeNav}>News</NavLink>
-            </div>
-            <div className={s.item}>
-                <NavLink to='/music' activeClassName={s.activeNav}>Music</NavLink>
-            </div>
-            <div className={s.item}>
-                <div className={s.Set}>
-                    <NavLink to='/set' activeClassName={s.activeNav}>Setting</NavLink>
-                </div>
+                <NavLink to='/message' activeClassName={s.activeNav}>Messages</NavLink>
             </div>
         </div>
     );
