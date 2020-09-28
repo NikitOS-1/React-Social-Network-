@@ -1,10 +1,12 @@
 import React from 'react';
+import MyFriend from './MyFriend/MyFriend';
 import s from './MyFriends.module.css';
 
-const MyFriends = () => {
+const MyFriends = (props) => {
+    let myFriend = props.FriendPage.User.map(u => <MyFriend id={u.id} name={u.name} />);
     return (
         <div className={s.MyFriends}>
-            My Friends
+            {myFriend}
         </div>
     )
 };
