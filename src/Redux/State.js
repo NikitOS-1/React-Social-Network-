@@ -5,25 +5,18 @@ let State = {
         PostData: [],
         newPostText: ''
     },
-    MessagePage: {
+    MessagesPage: {
         messagesData: [],
-        dialogsData: [],
         newMessages: ''
     },
     FriendPage: {
-        friendsData: [
+        User: [
             { id: 1, name: 'Nikita' },
-            { id: 1, name: 'Dima' },
-            { id: 1, name: 'Ira' },
-            { id: 1, name: 'Sasha' },
-            { id: 1, name: 'Vitya' },
-            { id: 1, name: 'Vasya' },
-            { id: 1, name: 'Nikita' },
-            { id: 1, name: 'Dima' },
-            { id: 1, name: 'Ira' },
-            { id: 1, name: 'Sasha' },
-            { id: 1, name: 'Vitya' },
-            { id: 1, name: 'Vasya' }
+            { id: 2, name: 'Sasha' },
+            { id: 3, name: 'Ira' },
+            { id: 4, name: 'Dima' },
+            { id: 5, name: 'Vitya' },
+            { id: 6, name: 'Vasya' }
         ]
     }
 };
