@@ -12,7 +12,7 @@ const App = (props) => {
             <Header />
             <Navbar />
             <MyFriends FriendPage={props.State.FriendPage} />
-            <Route path = "/profile" to={<Profile />} />
+            <Route path = "/profile" />
         </div>
     );
 };
