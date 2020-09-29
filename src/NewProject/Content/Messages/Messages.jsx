@@ -1,10 +1,12 @@
 import React from 'react';
-import s from './Profile.module.css'
+import s from './Messages.module.css';
 
 const Messages = () => {
     return (
         <div className={s.Messages}>
-            My Messages
+            ur tenetur quisquam sunt fugiat. Rem qui temporibus molestias ex eligendi minima
+            rerum nihil et totam nobis nemo deleniti soluta, atque laborum inventore consequuntur
+            consectetur iure quo corporis voluptatum!
         </div>
     )
 };

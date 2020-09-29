@@ -1,7 +1,7 @@
 .App{
     display: grid;
     grid-template-columns: 15% 65%;
-    grid-template-rows: 15% auto auto;
+    grid-template-rows: 15% 25% auto;
     
     grid-template-areas: 
     "Header Header"

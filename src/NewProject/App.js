@@ -5,6 +5,7 @@ import Header from './Header/Header.jsx';
 import MyFriends from './MyFriends/MyFriends';
 import Navbar from './Navbar/Navbar.jsx';
 import Profile from './Content/Profile/Profile';
+import Messages from './Content/Messages/Messages';
 
 const App = (props) => {
     return (
@@ -12,7 +13,9 @@ const App = (props) => {
             <Header />
             <Navbar />
             <MyFriends FriendPage={props.State.FriendPage} />
+            
             <Route path="/profile" render={(() => <Profile />)} />
+            <Route path="/messages" render={(() => <Messages />)} />
         </div>
     );
 };
