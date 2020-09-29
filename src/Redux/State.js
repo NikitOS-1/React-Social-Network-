@@ -1,4 +1,4 @@
-//import { rerenderEntireTree } from '../render';
+import { rerenderEntireTree } from '../render';
 
 let State = {
     ProfilePage: {
@@ -20,5 +20,16 @@ let State = {
         ]
     }
 };
+
+export let updateText_AddPost = (text) => {
+    State.ProfilePage.newPostText = text;
+    rerenderEntireTree();
+}
+export let clicks_AddPost = () => {
+    let postObj = {post:State.ProfilePage.newPostText}
+    State.ProfilePage.PostData.unshift(postObj);
+    State.ProfilePage.newPostText = '';
+    rerenderEntireTree();
+}
 
 export default State;
