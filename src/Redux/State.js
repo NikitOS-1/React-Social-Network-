@@ -1,5 +1,6 @@
-import { rerenderEntireTree } from '../render';
+let rerenderEntireTree = () => {
 
+}
 let State = {
     ProfilePage: {
         PostData: [],
@@ -21,15 +22,18 @@ let State = {
     }
 };
 
-export let updateText_AddPost = (text) => {
+export const updateText_AddPost = (text) => {
     State.ProfilePage.newPostText = text;
-    rerenderEntireTree();
+    rerenderEntireTree(State);
 }
-export let clicks_AddPost = () => {
-    let postObj = {post:State.ProfilePage.newPostText}
+export const clicks_AddPost = () => {
+    let postObj = { post: State.ProfilePage.newPostText }
     State.ProfilePage.PostData.unshift(postObj);
     State.ProfilePage.newPostText = '';
-    rerenderEntireTree();
+    rerenderEntireTree(State);
+}
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer;
 }
 
 export default State;
