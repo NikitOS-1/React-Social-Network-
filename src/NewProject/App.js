@@ -12,11 +12,11 @@ const App = (props) => {
         <div className={s.App}>
             <Header />
             <Navbar />
-            <MyFriends FriendPage={props.State.FriendPage} />
+            <MyFriends friendPage={props.state.friendPage} />
 
             <Route path="/profile" render={(() => <Profile updateText_AddPost={props.updateText_AddPost}
-                clicks_AddPost={props.clicks_AddPost} 
-                State={props.State.ProfilePage} />)} />
+                clicks_AddPost={props.clicks_AddPost}
+                state={props.state.profilePage} />)} />
             <Route path="/messages" render={(() => <Messages />)} />
         </div>
     );

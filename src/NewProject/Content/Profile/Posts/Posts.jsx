@@ -8,8 +8,8 @@ const Posts = (props) => {
         <div className={s.Posts}>
             <AddPost updateText_AddPost={props.updateText_AddPost}
                 clicks_AddPost={props.clicks_AddPost}
-                State_PostData={props.State_PostData} />
-            <Post State_PostData={props.State_PostData} />
+                state_postData={props.state_postData} />
+            <Post state_postData={props.state_postData} />
         </div>
     )
 };

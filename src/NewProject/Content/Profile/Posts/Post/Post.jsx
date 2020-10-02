@@ -2,7 +2,7 @@ import React from 'react';
 import s from './Post.module.css'
 
 const Post = (props) => {
-    const AddingPost = (props) => {
+    let AddingPost = (props) => {
         return (
             <div>
                 <h1>
@@ -12,7 +12,7 @@ const Post = (props) => {
         );
     };
 
-    let addingNewPostText = props.State_PostData.PostData.map(p => <AddingPost text={p.post} />);
+    let addingNewPostText = props.state_postData.postData.map(p => <AddingPost text={p.post} />);
 
     return (
         <div className={s.Post}>

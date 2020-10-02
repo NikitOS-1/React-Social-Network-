@@ -13,7 +13,7 @@ const AddPost = (props) => {
     return (
         <div className={s.AddPost}>
             <textarea onChange={changeText_AddPost} ref={text_AddPost}
-                value={props.State_PostData.newPostText} />
+                value={props.state_postData.newPostText} />
             <button onClick={click_AddPost} >Add Post</button>
         </div>
     )
