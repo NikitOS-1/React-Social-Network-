@@ -1,3 +1,4 @@
+debugger
 let store = {
     _state: {
         profilePage: {
@@ -19,26 +20,31 @@ let store = {
             ]
         }
     },
+    _callSubscribe() {
+        console.log('State Change')
+    },
+
+    subscribe(observer) {
+        this._callSubscribe = observer; //observer
+    },
     getState() {
         return this._state;
     },
-    rerenderEntireTree() {
-        console.log("Refresh page")
+
+    dispatch(action) {
+        debugger
+        if (action.type === 'CLICKS__ADD-POST') {
+            let postObj = { post: this._state.profilePage.newPostText }
+            this._state.profilePage.postData.unshift(postObj);
+            this._state.profilePage.newPostText = '';
+            this._callSubscribe(this._state);
+        } else if (action.type === 'UPDATE-TEXT__ADD-POST') {
+            debugger
+            this._state.profilePage.newPostText = action.text;
+            this._callSubscribe(this._state);
+        }
     },
-    updateText_AddPost(text) {
-        this._state.profilePage.newPostText = text;
-        this.rerenderEntireTree(this._state);
-    },
-    clicks_AddPost() {
-        let postObj = { post: this._state.profilePage.newPostText }
-        this._state.profilePage.postData.unshift(postObj);
-        this._state.profilePage.newPostText = '';
-        this.rerenderEntireTree(this._state);
-    },
-    subscribe(observer) {
-        this.rerenderEntireTree = observer;
-    }
-}
+};
 
 export default store;
 window.store = store;

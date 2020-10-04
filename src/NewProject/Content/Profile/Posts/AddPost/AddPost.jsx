@@ -4,11 +4,12 @@ import s from './AddPost.module.css'
 const AddPost = (props) => {
     let text_AddPost = React.createRef();
     let changeText_AddPost = () => {
+        debugger
         let text = text_AddPost.current.value;
-        props.updateText_AddPost(text);
+        props.dispatch({ type: 'UPDATE-TEXT__ADD-POST', text: text });
     }
     let click_AddPost = () => {
-        props.clicks_AddPost();
+        props.dispatch({ type: 'CLICKS__ADD-POST' });
     }
     return (
         <div className={s.AddPost}>

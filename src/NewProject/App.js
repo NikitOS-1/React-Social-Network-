@@ -14,8 +14,7 @@ const App = (props) => {
             <Navbar />
             <MyFriends friendPage={props.state.friendPage} />
 
-            <Route path="/profile" render={(() => <Profile updateText_AddPost={props.updateText_AddPost}
-                clicks_AddPost={props.clicks_AddPost}
+            <Route path="/profile" render={(() => <Profile dispatch={props.dispatch}
                 state={props.state.profilePage} />)} />
             <Route path="/messages" render={(() => <Messages />)} />
         </div>
