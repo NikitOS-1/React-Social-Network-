@@ -8,15 +8,15 @@ import Profile from './Content/Profile/Profile';
 import Messages from './Content/Messages/Messages';
 
 const App = (props) => {
-    debugger
     return (
         <div className={s.App}>
             <Header />
             <Navbar />
             <MyFriends friendPage={props.state.friendPage} />
 
-            <Route path="/profile" render={(() => <Profile dispatch={props.dispatch}
-                state={props.state.profilePage} />)} />
+            <Route path="/profile" render={(() => <Profile state={props.state}
+                dispatch={props.dispatch} />)} />
+
             <Route path="/messages" render={(() => <Messages />)} />
         </div>
     );

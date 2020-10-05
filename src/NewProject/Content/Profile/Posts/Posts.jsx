@@ -7,8 +7,8 @@ const Posts = (props) => {
     return (
         <div className={s.Posts}>
             <AddPost dispatch={props.dispatch}
-                state={props.state} />
-            <Post state={props.state} />
+                state={props.state.profilePage} />
+            <Post state={props.state.profilePage} />
         </div>
     )
 };
