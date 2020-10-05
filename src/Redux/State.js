@@ -1,4 +1,3 @@
-debugger
 let store = {
     _state: {
         profilePage: {
@@ -32,14 +31,12 @@ let store = {
     },
 
     dispatch(action) {
-        debugger
         if (action.type === 'CLICKS__ADD-POST') {
             let postObj = { post: this._state.profilePage.newPostText }
             this._state.profilePage.postData.unshift(postObj);
             this._state.profilePage.newPostText = '';
             this._callSubscribe(this._state);
         } else if (action.type === 'UPDATE-TEXT__ADD-POST') {
-            debugger
             this._state.profilePage.newPostText = action.text;
             this._callSubscribe(this._state);
         }
@@ -47,4 +44,3 @@ let store = {
 };
 
 export default store;
-window.store = store;

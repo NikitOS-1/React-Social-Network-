@@ -8,6 +8,7 @@ import Profile from './Content/Profile/Profile';
 import Messages from './Content/Messages/Messages';
 
 const App = (props) => {
+    debugger
     return (
         <div className={s.App}>
             <Header />

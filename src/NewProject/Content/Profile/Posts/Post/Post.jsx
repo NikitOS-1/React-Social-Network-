@@ -12,7 +12,7 @@ const Post = (props) => {
         );
     };
 
-    let addingNewPostText = props.state_postData.postData.map(p => <AddingPost text={p.post} />);
+    let addingNewPostText = props.state.postData.map(p => <AddingPost text={p.post} />);
 
     return (
         <div className={s.Post}>

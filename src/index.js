@@ -6,9 +6,10 @@ import App from './NewProject/App';
 import store from './Redux/State';
 
 let rerenderEntireTree = (store) => {
+    debugger
     ReactDOM.render(
         <BrowserRouter>
-            <App state={store.getState()} dispatch={store.dispatch} />
+            <App state={store.getState.bind(store)} dispatch={store.dispatch.bind(store)} />
         </BrowserRouter>,
         document.getElementById('root')
     );
