@@ -19,25 +19,25 @@ let store = {
             ]
         }
     },
-    rerenderEntireTree() {
+    _rerenderEntireTree() {
         console.log('State Change')
     },
 
     subscribe(observer) {
-        this.rerenderEntireTree = observer; //observer
+        this._rerenderEntireTree = observer; //observer
     },
     getState() {
         return this._state;
     },
     dispatch(action) {
         if (action.type === 'CLICKS__ADD-POST') {
-            let postObj = { post: this._state.profilePage.newPostText }
-            this._state.profilePage.postData.unshift(postObj);
+            let postObject = { post: this._state.profilePage.newPostText }
+            this._state.profilePage.postData.unshift(postObject);
             this._state.profilePage.newPostText = '';
-            this.rerenderEntireTree(this._state);
+            this._rerenderEntireTree(this._state);
         } else if (action.type === 'UPDATE-TEXT__ADD-POST') {
             this._state.profilePage.newPostText = action.text;
-            this.rerenderEntireTree(this._state);
+            this._rerenderEntireTree(this._state);
         }
     },
 };

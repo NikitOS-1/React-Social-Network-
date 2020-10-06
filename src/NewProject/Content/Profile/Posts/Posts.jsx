@@ -6,9 +6,9 @@ import AddPost from './AddPost/AddPost';
 const Posts = (props) => {
     return (
         <div className={s.Posts}>
-            <AddPost dispatch={props.dispatch}
-                state={props.state.profilePage} />
-            <Post state={props.state.profilePage} />
+            <AddPost state_profilePage={props.state_profilePage}
+                dispatch={props.dispatch} />
+            <Post state_profilePage={props.state_profilePage} />
         </div>
     )
 };
