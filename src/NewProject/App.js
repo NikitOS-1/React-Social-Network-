@@ -2,33 +2,24 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import s from './App.module.css';
 import Header from './Header/Header.jsx';
+import MyFriends from './MyFriends/MyFriends';
 import Navbar from './Navbar/Navbar.jsx';
-import Profile from './Content/Profile/Profile.jsx';
-import Messages from './Content/Messages/Messages.jsx';
-import News from './Content/News/News.jsx';
-import Music from './Content/Music/Music.jsx';
-import Set from './Content/Set/Set.jsx';
-import NavFrieds from './NavFrieds/NavFrieds'
+import Profile from './Content/Profile/Profile';
+import Messages from './Content/Messages/Messages';
 
 const App = (props) => {
-
     return (
         <div className={s.App}>
             <Header />
             <Navbar />
-            <NavFrieds friendsData={props.State.FriendPage} />
-            <div className={s.Content}>
-                <Route path='/profile' render={() => <Profile PostData={props.State.ProfilePage} 
-                                                                addPost={props.addPost}
-                                                                updateNewPostText={props.updateNewPostText}/>} />
-                <Route path='/message' render={() => <Messages messagesData={props.State.MessagePage} />} />
-                <Route path='/news' render={() => <News />} />
-                <Route path='/music' render={() => <Music />} />
-                <Route path='/set' render={() => <Set />} />
-            </div>
+            <MyFriends state_friendPage={props.state.friendPage} />
+
+            <Route path="/profile" render={(() => <Profile state_profilePage={props.state.profilePage}
+                dispatch={props.dispatch} />)} />
+
+            <Route path="/messages" render={(() => <Messages />)} />
         </div>
     );
 };
 
 export default App;
-

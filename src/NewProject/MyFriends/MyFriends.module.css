@@ -1,0 +1,6 @@
+.MyFriends {
+    padding:10px;
+    grid-area: MyFriends;
+    background-color: rgba(104, 135, 240, 0.7);
+    border-radius: 15px;
+}

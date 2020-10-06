@@ -1,26 +1,22 @@
 import React from 'react';
-import s from './Post.module.css';
-import ava from './logo512.png'
-
-const PostIng = (props) => {
-    return (
-        <div className={s.Post}>
-            <div className={s.fullPost}>
-                <img src={ava} alt='Your Ava'/>
-                <p className={s.postText}>{props.post}</p>
-                <p className={s.id}>{props.id}</p>
-                <p className={s.countLike}>Likes: {props.countLike}</p>
-            </div>
-        </div>
-    )
-};
-
+import s from './Post.module.css'
 
 const Post = (props) => {
-    let postElement = props.PostData.map(p => <PostIng id={p.id} countLike={p.countLike} post={p.post} ava={ava}/>);
+    let AddingPost = (props) => {
+        return (
+            <div>
+                <h1>
+                    {props.text}
+                </h1>
+            </div>
+        );
+    };
+
+    let addingNewPostText = props.state_profilePage.postData.map(p => <AddingPost text={p.post} />);
+
     return (
-        <div>
-            {postElement}
+        <div className={s.Post}>
+            {addingNewPostText}
         </div>
     );
 };

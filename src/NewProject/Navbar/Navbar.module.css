@@ -1,8 +1,9 @@
 .Navbar{
     background-color: rgba(104, 135, 240, 0.7);
-    grid-area: Navbar;
     border-radius: 15px;
     font-size: 20px;
+    grid-area: Navbar;
+    height: max-content;
 }
 .item{
     padding: 5px;
@@ -14,10 +15,10 @@
     text-decoration: none;
 }
 .item :hover {
-    color: burlywood;
+    color: whitesmoke;
 }
 .item .activeNav {
-    color: burlywood;
+    color: whitesmoke;
 }
 .item .Set{
     margin-top: 20px;
