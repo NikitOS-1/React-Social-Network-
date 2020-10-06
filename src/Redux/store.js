@@ -1,3 +1,6 @@
+const UPDATE_TEXT_ADD_POST = 'UPDATE-TEXT__ADD-POST';
+const CLICKS_ADD_POST = 'CLICKS__ADD-POST';
+
 let store = {
     _state: {
         profilePage: {
@@ -39,7 +42,10 @@ let store = {
             this._state.profilePage.newPostText = action.text;
             this._rerenderEntireTree(this._state);
         }
-    },
+    }
 };
+
+export const updateTextCreateAction = (text) => ({ type: UPDATE_TEXT_ADD_POST, text: text })
+export const clickCreateAction = () => ({ type: CLICKS_ADD_POST });
 
 export default store;
