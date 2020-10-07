@@ -1,12 +1,17 @@
 import React from 'react';
 import s from './Messages.module.css';
+import Message from './Message/Message';
 
-const Messages = () => {
+const Messages = (props) => {
+    let newMessage = props.state_messagesPage.messagesData.map(
+        m => <Message name={m.name}
+            message={m.message}
+            state_messagesPage={props.state_messagesPage}
+            dispatch={props.dispatch} />
+    );
     return (
         <div className={s.Messages}>
-            ur tenetur quisquam sunt fugiat. Rem qui temporibus molestias ex eligendi minima
-            rerum nihil et totam nobis nemo deleniti soluta, atque laborum inventore consequuntur
-            consectetur iure quo corporis voluptatum!
+            {newMessage}
         </div>
     )
 };

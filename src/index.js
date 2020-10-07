@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import App from './NewProject/App';
-import store from './Redux/store';
+import store from './Redux/redux-store';
 
 let rerenderEntireTree = () => {
     ReactDOM.render(
@@ -14,6 +14,8 @@ let rerenderEntireTree = () => {
     );
 };
 
-rerenderEntireTree();
+rerenderEntireTree(store.getState());
 
-store.subscribe(rerenderEntireTree);
+store.subscribe(() => {
+    rerenderEntireTree(store.getState());
+});

@@ -1,11 +1,19 @@
+// import messagesPageReducer from './messagesPage-reducer';
+// import profilePageReducer from './profilePage-reducer';
+
 let store = {
     _state: {
         profilePage: {
-            postData: [],
+            postData: [{ id: 1, post: 'hello' }],
             newPostText: ''
         },
         messagesPage: {
-            messagesData: [],
+            messagesData: [
+                { id: 1, name: 'Nikita', message: 'hello' },
+                { id: 1, name: 'Nikita', message: 'hello' },
+                { id: 1, name: 'Nikita', message: 'hello' },
+                { id: 1, name: 'Nikita', message: 'hello' }
+            ],
             newMessages: ''
         },
         friendPage: {
@@ -30,16 +38,11 @@ let store = {
         return this._state;
     },
     dispatch(action) {
-        if (action.type === 'CLICKS__ADD-POST') {
-            let postObject = { post: this._state.profilePage.newPostText }
-            this._state.profilePage.postData.unshift(postObject);
-            this._state.profilePage.newPostText = '';
-            this._rerenderEntireTree(this._state);
-        } else if (action.type === 'UPDATE-TEXT__ADD-POST') {
-            this._state.profilePage.newPostText = action.text;
-            this._rerenderEntireTree(this._state);
-        }
-    },
+        profilePageReducer(this._state.profilePage, action);
+        messagesPageReducer(this._state.messagesPage, action);
+        this._rerenderEntireTree(this._state);
+    }
 };
 
-export default store;
+
+// export default store;
