@@ -1,14 +1,23 @@
 const UPDATE_TEXT_ADD_POST = 'UPDATE-TEXT__ADD-POST';
 const CLICKS_ADD_POST = 'CLICKS__ADD-POST';
+const UPDATE_TEXT_MESSAGES = 'UPDATE_TEXT_MESSAGES';
+const CLICK_SEND_MESSAGES = 'CLICK_SEND_MESSAGE';
+
+
 
 let store = {
     _state: {
         profilePage: {
-            postData: [],
+            postData: [{ id: 1, post: 'hello' }],
             newPostText: ''
         },
         messagesPage: {
-            messagesData: [],
+            messagesData: [
+                { id: 1, name: 'Nikita', message: 'hello' },
+                { id: 1, name: 'Nikita', message: 'hello' },
+                { id: 1, name: 'Nikita', message: 'hello' },
+                { id: 1, name: 'Nikita', message: 'hello' }
+            ],
             newMessages: ''
         },
         friendPage: {
@@ -33,13 +42,21 @@ let store = {
         return this._state;
     },
     dispatch(action) {
-        if (action.type === 'CLICKS__ADD-POST') {
-            let postObject = { post: this._state.profilePage.newPostText }
+        if (action.type === CLICKS_ADD_POST) {
+            let postObject = { id: 1, post: this._state.profilePage.newPostText };
             this._state.profilePage.postData.unshift(postObject);
             this._state.profilePage.newPostText = '';
             this._rerenderEntireTree(this._state);
-        } else if (action.type === 'UPDATE-TEXT__ADD-POST') {
+        } else if (action.type === UPDATE_TEXT_ADD_POST) {
             this._state.profilePage.newPostText = action.text;
+            this._rerenderEntireTree(this._state);
+        } else if (action.type === CLICK_SEND_MESSAGES) {
+            let mesObject = { id: 1, name: 'Nikita', message: this._state.messagesPage.newMessages };
+            this._state.messagesPage.messagesData.push(mesObject);
+            this._state.messagesPage.newMessages = '';
+            this._rerenderEntireTree(this._state);
+        } else if (action.type === UPDATE_TEXT_MESSAGES) {
+            this._state.messagesPage.newMessages = action.text;
             this._rerenderEntireTree(this._state);
         }
     }
@@ -47,5 +64,7 @@ let store = {
 
 export const updateTextCreateAction = (text) => ({ type: UPDATE_TEXT_ADD_POST, text: text })
 export const clickCreateAction = () => ({ type: CLICKS_ADD_POST });
+export const updateTextMessageCreateAction = (text) => ({ type: UPDATE_TEXT_MESSAGES, text: text })
+export const clickMessageCreateAction = () => ({ type: CLICK_SEND_MESSAGES });
 
 export default store;
