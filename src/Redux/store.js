@@ -1,8 +1,5 @@
-const UPDATE_TEXT_ADD_POST = 'UPDATE-TEXT__ADD-POST';
-const CLICKS_ADD_POST = 'CLICKS__ADD-POST';
-const UPDATE_TEXT_MESSAGES = 'UPDATE_TEXT_MESSAGES';
-const CLICK_SEND_MESSAGES = 'CLICK_SEND_MESSAGE';
-
+import messagesPageReducer from './messagesPage-reducer';
+import profilePageReducer from './profilePage-reducer';
 
 
 let store = {
@@ -42,29 +39,11 @@ let store = {
         return this._state;
     },
     dispatch(action) {
-        if (action.type === CLICKS_ADD_POST) {
-            let postObject = { id: 1, post: this._state.profilePage.newPostText };
-            this._state.profilePage.postData.unshift(postObject);
-            this._state.profilePage.newPostText = '';
-            this._rerenderEntireTree(this._state);
-        } else if (action.type === UPDATE_TEXT_ADD_POST) {
-            this._state.profilePage.newPostText = action.text;
-            this._rerenderEntireTree(this._state);
-        } else if (action.type === CLICK_SEND_MESSAGES) {
-            let mesObject = { id: 1, name: 'Nikita', message: this._state.messagesPage.newMessages };
-            this._state.messagesPage.messagesData.push(mesObject);
-            this._state.messagesPage.newMessages = '';
-            this._rerenderEntireTree(this._state);
-        } else if (action.type === UPDATE_TEXT_MESSAGES) {
-            this._state.messagesPage.newMessages = action.text;
-            this._rerenderEntireTree(this._state);
-        }
+        profilePageReducer(this._state.profilePage, action);
+        messagesPageReducer(this._state.messagesPage, action);
+        this._rerenderEntireTree(this._state);
     }
 };
 
-export const updateTextCreateAction = (text) => ({ type: UPDATE_TEXT_ADD_POST, text: text })
-export const clickCreateAction = () => ({ type: CLICKS_ADD_POST });
-export const updateTextMessageCreateAction = (text) => ({ type: UPDATE_TEXT_MESSAGES, text: text })
-export const clickMessageCreateAction = () => ({ type: CLICK_SEND_MESSAGES });
 
 export default store;

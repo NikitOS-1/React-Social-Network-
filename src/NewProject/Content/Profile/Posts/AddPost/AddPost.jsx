@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './AddPost.module.css'
-import { updateTextCreateAction, clickCreateAction } from '../../../../../Redux/store';
+import { updateTextCreateAction, clickCreateAction } from '../../../../../Redux/profilePage-reducer';
 
 const AddPost = (props) => {
 

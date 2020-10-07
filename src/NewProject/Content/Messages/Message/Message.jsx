@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Message.module.css';
 import { NavLink } from 'react-router-dom';
-import { updateTextMessageCreateAction, clickMessageCreateAction } from '../../../../Redux/store';
+import { updateTextMessageCreateAction, clickMessageCreateAction } from '../../../../Redux/messagesPage-reducer';
 
 const Message = (props) => {
     let text = React.createRef();
