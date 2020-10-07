@@ -1,6 +1,5 @@
-import messagesPageReducer from './messagesPage-reducer';
-import profilePageReducer from './profilePage-reducer';
-
+// import messagesPageReducer from './messagesPage-reducer';
+// import profilePageReducer from './profilePage-reducer';
 
 let store = {
     _state: {
@@ -46,4 +45,4 @@ let store = {
 };
 
 
-export default store;
+// export default store;

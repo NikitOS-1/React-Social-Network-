@@ -1,7 +1,12 @@
 const UPDATE_TEXT_ADD_POST = 'UPDATE-TEXT__ADD-POST';
 const CLICKS_ADD_POST = 'CLICKS__ADD-POST';
 
-const profilePageReducer = (state, action) => {
+let initialState = {
+    postData: [{ id: 1, post: 'hello' }],
+    newPostText: ''
+};
+
+const profilePageReducer = (state = initialState, action) => {
     switch (action.type) {
         case CLICKS_ADD_POST:
             let postObject = { id: 1, post: state.newPostText };

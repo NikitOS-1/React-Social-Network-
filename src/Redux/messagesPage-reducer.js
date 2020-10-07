@@ -1,7 +1,17 @@
 const UPDATE_TEXT_MESSAGES = 'UPDATE_TEXT_MESSAGES';
 const CLICK_SEND_MESSAGES = 'CLICK_SEND_MESSAGE';
 
-const messagesPageReducer = (state, action) => {
+let initialState = {
+    messagesData: [
+        { id: 1, name: 'Nikita', message: 'hello' },
+        { id: 1, name: 'Nikita', message: 'hello' },
+        { id: 1, name: 'Nikita', message: 'hello' },
+        { id: 1, name: 'Nikita', message: 'hello' }
+    ],
+    newMessages: ''
+};
+
+const messagesPageReducer = (state = initialState, action) => {
     switch (action.type) {
         case CLICK_SEND_MESSAGES:
             let mesObject = { id: 1, name: 'Nikita', message: state.newMessages };
