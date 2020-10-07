@@ -4,15 +4,14 @@ import { NavLink } from 'react-router-dom';
 import { updateTextMessageCreateAction, clickMessageCreateAction } from '../../../../Redux/store';
 
 const Message = (props) => {
-    let text = React.createRef()
+    let text = React.createRef();
     let changeTextMessage = () => {
         let textValue = text.current.value;
         props.dispatch(updateTextMessageCreateAction(textValue));
-    }
+    };
     let sendMessage = () => {
         props.dispatch(clickMessageCreateAction());
     };
-
     return (
         <div className={s.Message}>
             <div className={s.MessageName}>
