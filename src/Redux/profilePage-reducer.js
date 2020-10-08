@@ -1,5 +1,5 @@
-const UPDATE_TEXT_ADD_POST = 'UPDATE-TEXT__ADD-POST';
-const CLICKS_ADD_POST = 'CLICKS__ADD-POST';
+const UPDATE_TEXT_ADD_POST = 'UPDATE_TEXT_ADD_POST';
+const CLICKS_ADD_POST = 'CLICKS_ADD_POST';
 
 let initialState = {
     postData: [{ id: 1, post: 'hello' }],
